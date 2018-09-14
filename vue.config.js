@@ -67,8 +67,10 @@ module.exports = {
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
-    } else {
+    } else if (process.env.NODE_ENV === 'development') {
       // 为开发环境修改配置...
+    } else if (process.env.NODE_ENV === 'testing') {
+      // 为测试环境修改配置...
     }
   }
 }
