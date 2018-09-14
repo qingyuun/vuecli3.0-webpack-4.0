@@ -98,9 +98,9 @@ export default {
         nickName: ''
       },
       url: {
-        about: process.env.API_WEB_URL + '/Home/About',
-        userAgreement: process.env.API_WEB_URL + '/Protocol/Index',
-        commonProblem: process.env.API_WEB_URL + '/Common/Index'
+        about: process.env.VUE_APP_WEB_URL + '/Home/About',
+        userAgreement: process.env.VUE_APP_WEB_URL + '/Protocol/Index',
+        commonProblem: process.env.VUE_APP_WEB_URL + '/Common/Index'
       }
     }
   },
@@ -147,19 +147,19 @@ export default {
       let _this = this
       switch (key) {
         case 'index':
-          location.href = process.env.API_WEB_URL
+          location.href = process.env.VUE_APP_WEB_URL
           break
         case 'course':
-          location.href = process.env.API_WEB_URL + '/Course/List'
+          location.href = process.env.VUE_APP_WEB_URL + '/Course/List'
           break
         case 'lecturer':
-          location.href = process.env.API_WEB_URL + '/Teacher/List'
+          location.href = process.env.VUE_APP_WEB_URL + '/Teacher/List'
           break
         case '2018':
-          location.href = process.env.API_WEB_URL + '/Private/Index'
+          location.href = process.env.VUE_APP_WEB_URL + '/Private/Index'
           break
         case 'about':
-          location.href = process.env.API_WEB_URL + '/Home/About'
+          location.href = process.env.VUE_APP_WEB_URL + '/Home/About'
           break
         case 'login':
           _this.$router.push({ name: 'Login', query: { returnUrl: _this.$route.fullPath } })

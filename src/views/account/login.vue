@@ -279,7 +279,7 @@ export default {
   },
 
   mounted () {
-    console.log(process.env.VUE_APP_SECRET)
+
   },
 
   methods: {
@@ -289,7 +289,7 @@ export default {
         if (valid) {
           this.ajax({
             type: 'post',
-            url: process.env.API_LOGIN,
+            url: process.env.VUE_APP_LOGIN,
             data: this.loginForm,
             success: function (data) {
               _this.cookie.set('tokenRefresh', data.refresh_token, data.expires_in * 24, location.hostname)

@@ -8,7 +8,7 @@ const token = function (token) {
   if (time || token) {
     ajax({
       type: 'post',
-      url: process.env.API_LOGIN,
+      url: process.env.VUE_APP_LOGIN,
       data: {
         client_id: 'Web',
         grant_type: 'refresh_token',

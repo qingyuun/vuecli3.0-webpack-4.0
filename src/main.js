@@ -16,7 +16,6 @@ Vue.use(ElementUI, http)
 Vue.prototype.axios = http
 Vue.prototype.ajax = ajax
 Vue.prototype.cookie = cookie
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

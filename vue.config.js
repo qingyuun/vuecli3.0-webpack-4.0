@@ -67,6 +67,9 @@ module.exports = {
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       // 为生产环境修改配置...
+      process.env.VUE_APP_ROOT = 'http://api.juristedu.com/'
+      process.env.VUE_APP_LOGIN = 'http://i.juristedu.com/connect/token'
+      process.env.VUE_APP_WEB_URL = 'http://www.juristedu.com'
     } else if (process.env.NODE_ENV === 'development') {
       // 为开发环境修改配置...
     } else if (process.env.NODE_ENV === 'testing') {
